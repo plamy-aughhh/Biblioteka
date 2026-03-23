@@ -8,7 +8,7 @@ title = st.text_input("Заглавие")
 author = st.text_input("Автор")
 price = st.text_input("Цена")
 
-if button("Добави книгата"):
+if st.button("Добави книгата"):
   books = {"title": title, "author": author, "price": price}
   
 st.session_state.books.append(book)
