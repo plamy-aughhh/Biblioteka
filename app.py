@@ -31,7 +31,7 @@ if st.button("Търси по автор"):
   found = False
 
 for book in st.session_state.books:
-  if book ["author"] == search author:
+  if book ["author"] == search_author:
   st.write(book)
   found = True
 
