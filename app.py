@@ -28,8 +28,7 @@ st.write("────୨ৎ────")
 st.header("Търсене по автор")
 search_author = st.text_input("Въведете име")
 if st.button("Търси по автор"):
-
-found = False
+  found = False
 
 for book in st.session_state.books:
   if book ["author"] == search author:
