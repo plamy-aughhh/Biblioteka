@@ -6,7 +6,7 @@ if "books" not in st.session_state:
 st.header("📖 Добави книга!")
 title = st.text_input("Заглавие")
 author = st.text_input("Автор")
-price = st.text_input("Цена", min_value=0.0)
+price = st.text_input("Цена")
 
 if button("Добави книгата"):
   books = {"title": title, "author": author, "price": price}
