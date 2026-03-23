@@ -1,1 +1,26 @@
 import streamlit as st
+
+if "books" not in st.session_state:
+  st.session_state.books = []
+
+st.header("📖 Добави книга!")
+title = st.text_input("Заглавие")
+author = st.text_input("Автор")
+price = st.text_input("Цена", min_value=0.0)
+
+if button("Добави книгата"):
+  books = {"title": title, "author": author, "price": price}
+  
+st.session_state.books.append(book)
+st.success("Книгата беше добавена! :)")
+
+st.button("Покажи всички книги")
+if len(st.session_state.books) == 0:
+  st.write("Няма добавени книги")
+else:
+  for book in st.session_state.books:
+    st.write("Заглавие", ["title"])
+    st.write("Автор", ["author"])
+    st.write("Цена", ["price"])
+
+st.write("────୨ৎ────")
